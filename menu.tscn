@@ -197,8 +197,3 @@ layout_mode = 2
 layout_mode = 2
 text = "Credits"
 horizontal_alignment = 1
-
-[node name="HScrollBar" type="HScrollBar" parent="." unique_id=319434737]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
