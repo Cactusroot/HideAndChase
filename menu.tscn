@@ -41,6 +41,15 @@ layout_mode = 2
 text = "Language"
 horizontal_alignment = 1
 
+[node name="ItemList" type="ItemList" parent="MarginContainer/PageScroll/Pages/Language" unique_id=1552417633]
+layout_mode = 2
+auto_width = true
+auto_height = true
+item_count = 3
+item_0/text = "English"
+item_1/text = "German"
+item_2/text = "Spanish"
+
 [node name="Replay" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=101444521]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
@@ -93,6 +102,11 @@ size_flags_horizontal = 4
 placeholder_text = "Test"
 
 [node name="PhotoTime" type="LineEdit" parent="MarginContainer/PageScroll/Pages/Timing" unique_id=1434667295]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="GameTime" type="LineEdit" parent="MarginContainer/PageScroll/Pages/Timing" unique_id=1401986024]
 custom_minimum_size = Vector2(1000, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -161,6 +175,10 @@ layout_mode = 2
 layout_mode = 2
 text = "Powerups"
 horizontal_alignment = 1
+
+[node name="CheckButton" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Powerups" unique_id=1655245451]
+layout_mode = 2
+text = "On/Off"
 
 [node name="Curses" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=1779444654]
 custom_minimum_size = Vector2(1080, 0)
