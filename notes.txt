@@ -1,0 +1,11 @@
+Formel für Höhe des Grid Containers:
+	
+	totalhsep = hsep * (columns - 1)
+	totalvsep = vsep * (rows - 1)
+	height = (rows / columns) * (width - totalhsep) + totalvsep
+
+- Startseite: Name, Startknopf (stopped, waiting (+ code?), started)
+- gespeicherte Spiele + replays
+- geofencing
+- mode + information [hider / seeker]
+- duties (+ rewards / punishments)

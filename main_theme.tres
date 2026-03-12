@@ -1,0 +1,25 @@
+[gd_resource type="Theme" format=3 uid="uid://2xgb3f2w1gso"]
+
+[ext_resource type="FontFile" uid="uid://mcntb75ydes7" path="res://SingleDay-Regular.ttf" id="1_470mv"]
+[ext_resource type="Texture2D" uid="uid://ii6mbxc6qwlg" path="res://unchecked.svg" id="2_58jnp"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a2l2q"]
+load_path = "res://.godot/imported/checked.svg-0feb3dd3aa5e71ae7f810db47c93331d.ctex"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a2l2q"]
+
+[resource]
+default_font = ExtResource("1_470mv")
+default_font_size = 40
+CheckButton/font_sizes/font_size = 30
+CheckButton/icons/checked = SubResource("CompressedTexture2D_a2l2q")
+CheckButton/icons/checked_disabled = null
+CheckButton/icons/checked_disabled_mirrored = null
+CheckButton/icons/checked_mirrored = null
+CheckButton/icons/unchecked = ExtResource("2_58jnp")
+CheckButton/icons/unchecked_disabled = null
+CheckButton/icons/unchecked_disabled_mirrored = null
+CheckButton/icons/unchecked_mirrored = null
+HScrollBar/styles/scroll = SubResource("StyleBoxFlat_a2l2q")
+Label/font_sizes/font_size = 80
+VBoxContainer/constants/separation = 20
