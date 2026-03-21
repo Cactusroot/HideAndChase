@@ -1,0 +1,16 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer square -->
+  <rect x="10" y="10" width="180" height="180" rx="20" ry="20"
+        fill="none" stroke="black" stroke-width="10"/>
+
+  <!-- Inner square -->
+  <rect x="40" y="40" width="120" height="120" rx="12" ry="12"
+        fill="none" stroke="black" stroke-width="10"/>
+
+  <!-- Horizontal lines (flush with inner square edges) -->
+  <!-- spacing = 120 / 3 = 40 -->
+  <line x1="40" y1="80" x2="160" y2="80"
+        stroke="black" stroke-width="10"/>
+  <line x1="40" y1="120" x2="160" y2="120"
+        stroke="black" stroke-width="10"/>
+</svg>

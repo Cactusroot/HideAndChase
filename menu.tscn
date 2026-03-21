@@ -3,6 +3,8 @@
 [ext_resource type="Theme" uid="uid://2xgb3f2w1gso" path="res://main_theme.tres" id="1_mae5d"]
 [ext_resource type="Script" uid="uid://gkr5usu2pakc" path="res://pages.gd" id="3_4hy44"]
 [ext_resource type="Script" uid="uid://wss8jcp3xomr" path="res://page_scroll.gd" id="3_mae5d"]
+[ext_resource type="Script" uid="uid://86w3i78ne0fs" path="res://integer_edit.gd" id="4_4hy44"]
+[ext_resource type="Script" uid="uid://d1f7cd1dbl15e" path="res://margin_v_box_container.gd" id="4_ytr4m"]
 
 [node name="Interface" type="Control" unique_id=302542456]
 layout_mode = 3
@@ -13,187 +15,197 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_mae5d")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1896694482]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="PageScroll" type="ScrollContainer" parent="MarginContainer" unique_id=242418524]
-layout_mode = 2
+[node name="PageScroll" type="ScrollContainer" parent="." unique_id=242418524]
+layout_mode = 0
+offset_right = 1080.0
+offset_bottom = 2400.0
 script = ExtResource("3_mae5d")
 
-[node name="Pages" type="HBoxContainer" parent="MarginContainer/PageScroll" unique_id=845760308]
+[node name="Pages" type="HBoxContainer" parent="PageScroll" unique_id=845760308]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 script = ExtResource("3_4hy44")
 
-[node name="Language" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=87351921]
+[node name="MarginVBoxContainer" type="MarginContainer" parent="PageScroll/Pages" unique_id=1469791828]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+script = ExtResource("4_ytr4m")
+metadata/_custom_type_script = "uid://d1f7cd1dbl15e"
+
+[node name="Title" type="Label" parent="PageScroll/Pages/MarginVBoxContainer" unique_id=1095132541]
+layout_mode = 2
+text = "Hallo"
+
+[node name="Label" type="Label" parent="PageScroll/Pages/MarginVBoxContainer" unique_id=1398425848]
+layout_mode = 2
+text = "erewrwr"
+
+[node name="Language" type="VBoxContainer" parent="PageScroll/Pages" unique_id=87351921]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Language" unique_id=258830483]
+[node name="Title" type="Label" parent="PageScroll/Pages/Language" unique_id=258830483]
 layout_mode = 2
 text = "Language"
 horizontal_alignment = 1
 
-[node name="Replay" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=101444521]
+[node name="Replay" type="VBoxContainer" parent="PageScroll/Pages" unique_id=101444521]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Replay" unique_id=1234883779]
+[node name="Title" type="Label" parent="PageScroll/Pages/Replay" unique_id=1234883779]
 layout_mode = 2
 text = "Replay"
 horizontal_alignment = 1
 
-[node name="Preset" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=758938235]
+[node name="Preset" type="VBoxContainer" parent="PageScroll/Pages" unique_id=758938235]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Preset" unique_id=524524191]
+[node name="Title" type="Label" parent="PageScroll/Pages/Preset" unique_id=524524191]
 layout_mode = 2
 text = "Preset"
 horizontal_alignment = 1
 
-[node name="Start" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=1142791465]
+[node name="Start" type="VBoxContainer" parent="PageScroll/Pages" unique_id=1142791465]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Start" unique_id=309702044]
+[node name="Title" type="Label" parent="PageScroll/Pages/Start" unique_id=309702044]
 layout_mode = 2
 text = "Start"
 horizontal_alignment = 1
 
-[node name="Mode" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=1340859562]
+[node name="Mode" type="VBoxContainer" parent="PageScroll/Pages" unique_id=1340859562]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Mode" unique_id=1047295166]
+[node name="Title" type="Label" parent="PageScroll/Pages/Mode" unique_id=1047295166]
 layout_mode = 2
 text = "Mode"
 horizontal_alignment = 1
 
-[node name="Timing" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=21269302]
+[node name="Timing" type="VBoxContainer" parent="PageScroll/Pages" unique_id=21269302]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Timing" unique_id=1610276294]
+[node name="Title" type="Label" parent="PageScroll/Pages/Timing" unique_id=1610276294]
 layout_mode = 2
 text = "Timing"
 horizontal_alignment = 1
 
-[node name="HidingTime" type="LineEdit" parent="MarginContainer/PageScroll/Pages/Timing" unique_id=158172828]
-custom_minimum_size = Vector2(1000, 0)
+[node name="HidingTime" type="LineEdit" parent="PageScroll/Pages/Timing" unique_id=1563682751]
 layout_mode = 2
-size_flags_horizontal = 4
-placeholder_text = "Test"
+script = ExtResource("4_4hy44")
+metadata/_custom_type_script = "uid://86w3i78ne0fs"
 
-[node name="PhotoTime" type="LineEdit" parent="MarginContainer/PageScroll/Pages/Timing" unique_id=1434667295]
-custom_minimum_size = Vector2(1000, 0)
+[node name="PhotoTime" type="LineEdit" parent="PageScroll/Pages/Timing" unique_id=1178008849]
 layout_mode = 2
-size_flags_horizontal = 4
+script = ExtResource("4_4hy44")
+metadata/_custom_type_script = "uid://86w3i78ne0fs"
 
-[node name="Geofencing" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=1587892048]
+[node name="Geofencing" type="VBoxContainer" parent="PageScroll/Pages" unique_id=1587892048]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Geofencing" unique_id=1823535701]
+[node name="Title" type="Label" parent="PageScroll/Pages/Geofencing" unique_id=1823535701]
 layout_mode = 2
 text = "Geofencing"
 horizontal_alignment = 1
 
-[node name="Information" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=583075546]
+[node name="Information" type="VBoxContainer" parent="PageScroll/Pages" unique_id=583075546]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Information" unique_id=1046529202]
+[node name="Title" type="Label" parent="PageScroll/Pages/Information" unique_id=1046529202]
 layout_mode = 2
 text = "Information"
 horizontal_alignment = 1
 
-[node name="Features" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=163313010]
+[node name="Features" type="VBoxContainer" parent="PageScroll/Pages" unique_id=163313010]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Features" unique_id=2112877229]
+[node name="Title" type="Label" parent="PageScroll/Pages/Features" unique_id=2112877229]
 layout_mode = 2
 text = "Features"
 horizontal_alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages/Features" unique_id=1468670224]
+[node name="VBoxContainer" type="VBoxContainer" parent="PageScroll/Pages/Features" unique_id=1468670224]
 layout_mode = 2
 
-[node name="HasChat" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Features/VBoxContainer" unique_id=1228255007]
+[node name="HasChat" type="CheckButton" parent="PageScroll/Pages/Features/VBoxContainer" unique_id=1228255007]
 layout_mode = 2
 text = "Chat"
 
-[node name="HasHistory" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Features/VBoxContainer" unique_id=1418475218]
+[node name="HasHistory" type="CheckButton" parent="PageScroll/Pages/Features/VBoxContainer" unique_id=1418475218]
 layout_mode = 2
 text = "Information History"
 
-[node name="Quests" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=789113848]
+[node name="Quests" type="VBoxContainer" parent="PageScroll/Pages" unique_id=789113848]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Quests" unique_id=1101475122]
+[node name="Title" type="Label" parent="PageScroll/Pages/Quests" unique_id=1101475122]
 layout_mode = 2
 text = "Timing"
 horizontal_alignment = 1
 
-[node name="Shop" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=1670231429]
+[node name="Shop" type="VBoxContainer" parent="PageScroll/Pages" unique_id=1670231429]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Shop" unique_id=437159018]
+[node name="Title" type="Label" parent="PageScroll/Pages/Shop" unique_id=437159018]
 layout_mode = 2
 text = "Shop"
 horizontal_alignment = 1
 
-[node name="Powerups" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=1216205893]
+[node name="Powerups" type="VBoxContainer" parent="PageScroll/Pages" unique_id=1216205893]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Powerups" unique_id=1956544067]
+[node name="Title" type="Label" parent="PageScroll/Pages/Powerups" unique_id=1956544067]
 layout_mode = 2
 text = "Powerups"
 horizontal_alignment = 1
 
-[node name="Curses" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=1779444654]
+[node name="Curses" type="VBoxContainer" parent="PageScroll/Pages" unique_id=1779444654]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Curses" unique_id=1634246325]
+[node name="Title" type="Label" parent="PageScroll/Pages/Curses" unique_id=1634246325]
 layout_mode = 2
 text = "Curses"
 horizontal_alignment = 1
 
-[node name="Safety" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=1520395678]
+[node name="Safety" type="VBoxContainer" parent="PageScroll/Pages" unique_id=1520395678]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Safety" unique_id=1826392303]
+[node name="Title" type="Label" parent="PageScroll/Pages/Safety" unique_id=1826392303]
 layout_mode = 2
 text = "Safety"
 horizontal_alignment = 1
 
-[node name="AntiCheat" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=1208942163]
+[node name="AntiCheat" type="VBoxContainer" parent="PageScroll/Pages" unique_id=1208942163]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/AntiCheat" unique_id=807629015]
+[node name="Title" type="Label" parent="PageScroll/Pages/AntiCheat" unique_id=807629015]
 layout_mode = 2
 text = "Anti Cheat"
 horizontal_alignment = 1
 
-[node name="Credits" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=995802068]
+[node name="Credits" type="VBoxContainer" parent="PageScroll/Pages" unique_id=995802068]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Credits" unique_id=1175871894]
+[node name="Title" type="Label" parent="PageScroll/Pages/Credits" unique_id=1175871894]
 layout_mode = 2
 text = "Credits"
 horizontal_alignment = 1
