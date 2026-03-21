@@ -99,17 +99,19 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(1000, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-placeholder_text = "Test"
+placeholder_text = "HidingTime"
 
 [node name="PhotoTime" type="LineEdit" parent="MarginContainer/PageScroll/Pages/Timing" unique_id=1434667295]
 custom_minimum_size = Vector2(1000, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+placeholder_text = "PhotoTime"
 
 [node name="GameTime" type="LineEdit" parent="MarginContainer/PageScroll/Pages/Timing" unique_id=1401986024]
 custom_minimum_size = Vector2(1000, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+placeholder_text = "GameTime"
 
 [node name="Geofencing" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=1587892048]
 custom_minimum_size = Vector2(1080, 0)
@@ -124,10 +126,60 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Information" unique_id=1046529202]
+[node name="Seeker" type="Label" parent="MarginContainer/PageScroll/Pages/Information" unique_id=1046529202]
 layout_mode = 2
-text = "Information"
+text = "Seeker Information"
 horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages/Information" unique_id=1513199003]
+layout_mode = 2
+
+[node name="Distance" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Information/VBoxContainer" unique_id=725852318]
+layout_mode = 2
+text = "Distance to Seeker"
+
+[node name="Angle of the motion vectors" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Information/VBoxContainer" unique_id=441955850]
+layout_mode = 2
+text = "Angle of the motion vectors"
+
+[node name="Photo" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Information/VBoxContainer" unique_id=1033267973]
+layout_mode = 2
+text = "Photo"
+
+[node name="reveal hider location" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Information/VBoxContainer" unique_id=966095074]
+layout_mode = 2
+text = "reveal hider location every x minutes"
+
+[node name="hotter or colder" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Information/VBoxContainer" unique_id=650484873]
+layout_mode = 2
+text = "hotter/colder"
+
+[node name="AI hints" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Information/VBoxContainer" unique_id=280554045]
+layout_mode = 2
+text = "AI hints"
+
+[node name="distribute information" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Information/VBoxContainer" unique_id=1781945722]
+layout_mode = 2
+text = "distribute information among seekers"
+
+[node name="Hider" type="Label" parent="MarginContainer/PageScroll/Pages/Information" unique_id=778910513]
+layout_mode = 2
+text = "Hider Information"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages/Information" unique_id=1284086102]
+layout_mode = 2
+
+[node name="Distance" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Information/VBoxContainer2" unique_id=172778398]
+layout_mode = 2
+text = "Distance to Seeker"
+
+[node name="Angle of the motion vectors" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Information/VBoxContainer2" unique_id=936837397]
+layout_mode = 2
+text = "Angle of the motion vectors"
+
+[node name="reveal seeker location" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Information/VBoxContainer2" unique_id=580594614]
+layout_mode = 2
+text = "reveal seeker location every x minutes"
 
 [node name="Features" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=163313010]
 custom_minimum_size = Vector2(1080, 0)
@@ -149,14 +201,25 @@ text = "Chat"
 layout_mode = 2
 text = "Information History"
 
+[node name="AI Rating" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Features/VBoxContainer" unique_id=106417371]
+layout_mode = 2
+text = "AI based rating of the pictures"
+
 [node name="Quests" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=789113848]
 custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 
 [node name="Title" type="Label" parent="MarginContainer/PageScroll/Pages/Quests" unique_id=1101475122]
 layout_mode = 2
-text = "Timing"
+text = "Quests"
 horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages/Quests" unique_id=692499566]
+layout_mode = 2
+
+[node name="On_Off" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Quests/VBoxContainer" unique_id=805640015]
+layout_mode = 2
+text = "On/Off"
 
 [node name="Shop" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=1670231429]
 custom_minimum_size = Vector2(1080, 0)
@@ -176,7 +239,7 @@ layout_mode = 2
 text = "Powerups"
 horizontal_alignment = 1
 
-[node name="CheckButton" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Powerups" unique_id=1655245451]
+[node name="On_Off" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Powerups" unique_id=1655245451]
 layout_mode = 2
 text = "On/Off"
 
@@ -188,6 +251,13 @@ layout_mode = 2
 layout_mode = 2
 text = "Curses"
 horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages/Curses" unique_id=1695289422]
+layout_mode = 2
+
+[node name="On_Off" type="CheckButton" parent="MarginContainer/PageScroll/Pages/Curses/VBoxContainer" unique_id=1317763354]
+layout_mode = 2
+text = "On/Off"
 
 [node name="Safety" type="VBoxContainer" parent="MarginContainer/PageScroll/Pages" unique_id=1520395678]
 custom_minimum_size = Vector2(1080, 0)
