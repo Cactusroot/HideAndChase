@@ -34,7 +34,11 @@ In {geschweiften Klammern} stehen Referenzen zu Design-Problemen oder Apps.
 	- reveal location [at regular time intervals {gottcha, Venari}, as a penalty]
 	- live locations
 	- difference in direction of motion {randomness}
+<<<<<<< HEAD
 	- temperature
+=======
+	- hotter/colder
+>>>>>>> refs/remotes/origin/main
 	- AI hints {unknown}
 	- line-of-sight mechanics / RSSI? {complexity}
 	- distribute information among seekers?
